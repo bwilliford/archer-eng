@@ -53,7 +53,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 100;
+  z-index: 2;
   width: 3rem;
   height: 6rem;
   transform: rotate(180deg);
@@ -772,6 +772,7 @@ nav .button-collapse {
 
   #logo {
     left: 20px;
+    top: 24px;
   }
 
   .reverse {
@@ -1165,6 +1166,7 @@ ul li.services {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 24px;
+  margin-bottom: 8px;
 }
 
 input[type="text"],
@@ -1228,5 +1230,10 @@ textarea::placeholder {
 .input-field select {
   box-shadow: none !important;
   border-width: 0px !important;
+  max-width: calc(100% - 40px) !important;
+}
+
+.input-field textarea {
+  max-width: calc(100% - 20px) !important;
 }
 
