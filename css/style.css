@@ -72,7 +72,7 @@ body {
 .arrowMotif {
   width: 6rem;
   height: 4rem;
-  margin-left: -12px;
+  margin-left: -16px;
   background-image: url('../images/icons/downArrowActive.svg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -100,9 +100,8 @@ body {
 }
 
 .capability {
-  width: 4rem;
+  width: 6rem;
   height: 4rem;
-  margin-bottom: 2rem;
 }
 
 p {
@@ -126,7 +125,7 @@ p {
 }
 
 a {
-  color: var(--brand-color);
+  color: #ffffffcc;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -224,27 +223,28 @@ button, button:focus, button:active {
   background-color: var(--brand-color);
   border-radius: var(--master-border-radius);
   line-height: 44px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
   height: 44px;
   border: 0px solid #000;
-  color: #04061d;
+  color: #050e1d;
   padding: 0 20px;
-  box-shadow: 0px 8px 16px #7467FF2c;
   text-transform: uppercase;
   transition-duration: var(--transition-duration);
 }
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0px 12px 32px #7467FF46;
   transition-duration: var(--transition-duration);
 }
 
 .secondary {
-  color: rgba(255,255,255,0.7);
-  background-color: rgba(0,0,0,0);
-  box-shadow: 0px 0px 0px #7467FF00;
-  border: 1px solid rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.05);
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .secondary:hover {
@@ -534,16 +534,17 @@ section {
   background: linear-gradient(
     to bottom,
     rgba(5, 17, 39, 0.2) 0%,
-    #051127 100%
+    #050e1d 100%
   );
   height: 100vh;
+  position: relative;
 }
 
 .footer {
   padding: 160px 0;
   background: linear-gradient(
     to bottom,
-    #051127 0%,
+    #050e1d 0%,
     rgba(5, 17, 39, 0.2) 100%
   );
   background-size: cover;
@@ -970,8 +971,9 @@ nav .button-collapse {
   border-radius: var(--master-border-radius);
   transition-duration: var(--transition-duration) !important;
   transform: scale(1);
-  min-height: 560px;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  padding: 20px;
+  min-height: 240px;
 }
 
 .press {
@@ -1124,10 +1126,6 @@ nav .button-collapse {
       display: none;
   }
 
-  .card {
-    min-height: 520px;
-  }
-
   .press {
     min-height: 480px;
   }
@@ -1157,7 +1155,78 @@ nav .button-collapse {
   padding: 0 24px;
 }
 
-ul li {
-  opacity: 0.8;
+ul li.services {
+  color: rgba(255,255,255,0.7);
   font-size: 18px;
+  font-weight: 300;
+  font-family: "Open Sans";
+  padding-left: 32px;
+  background-image: url('../images/favicons/favicon.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  background-color: rgba(255,255,255,0.1) !important;
+  border: 0 solid var(--brand-color) !important;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  border-radius: var(--master-border-radius) !important;
+  transition: border-color var(--transition-duration);
+  box-shadow: none;
+  padding-left: 20px !important;
+}
+
+select {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 0px solid var(--brand-color) !important;
+  background-color: rgba(255,255,255,0.15) !important;
+  color: #fff;
+}
+
+label {
+  color: var(--brand-color);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
+input[type="search"]::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="tel"],
+.input-field input[type="password"],
+.input-field input[type="number"],
+.input-field input[type="search"],
+.input-field textarea,
+.input-field select {
+  box-shadow: none !important;
+  border-width: 0px !important;
+}
+

@@ -96,7 +96,7 @@ window.addEventListener('scroll', function() {
  */
 (function() {
     // Utility function to animate a stat number
-    const animateCountUp = (el, targetVal, duration = 1500) => {
+    const animateCountUp = (el, targetVal, duration = 2000) => {
         let startTimestamp = null;
         const startVal = 0;
         const step = (timestamp) => {
