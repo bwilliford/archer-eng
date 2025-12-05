@@ -1230,10 +1230,10 @@ textarea::placeholder {
 .input-field select {
   box-shadow: none !important;
   border-width: 0px !important;
-  max-width: calc(100% - 40px) !important;
+  max-width: calc(100% - 20px) !important;
 }
 
 .input-field textarea {
-  max-width: calc(100% - 20px) !important;
+  max-width: 100% !important;
 }
 
