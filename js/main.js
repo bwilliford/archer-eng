@@ -85,6 +85,28 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+// Show or hide the .header depending on scroll position
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    if (window.scrollY > 40) {
+        header.style.display = 'block';
+    } else {
+        header.style.display = 'none';
+    }
+});
+
+// Make sure .header is hidden on page load (until scrolled)
+window.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    if (header) {
+        header.style.display = 'none';
+    }
+});
+
+
 //Stats
 // Smooth number count-up animation for .stat elements on #about section scroll
 
