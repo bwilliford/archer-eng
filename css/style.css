@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
 :root {
   --brand-color: #DE8444;
@@ -108,14 +108,14 @@ p {
   font-size: 18px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Open Sans", Sans Serif;
+  font-family: sans-serif;
 }
 
 #current-year {
   font-size: 18px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Open Sans", Sans Serif;
+  font-family: sans-serif;
   font-style: normal;
 }
 
@@ -1020,7 +1020,7 @@ nav .button-collapse {
   font-size: 18px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Open Sans";
+  font-family: sans-serif;
 }
 
 .card-content h4, .card-content h5 {
@@ -1163,7 +1163,7 @@ ul li.services {
   color: rgba(255,255,255,0.7);
   font-size: 18px;
   font-weight: 300;
-  font-family: "Open Sans";
+  font-family: sans-serif;
   padding-left: 32px;
   background-image: url('../images/icons/favicon.svg');
   background-repeat: no-repeat;
