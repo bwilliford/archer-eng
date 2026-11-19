@@ -1,0 +1,5 @@
+# Archer Engineering Services — all crawlers, including AI agents and assistants, are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.archer-eng.com/sitemap.xml

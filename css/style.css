@@ -496,6 +496,10 @@ section {
 #navTrigger {
   width: 40px;
   height: 40px;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  line-height: normal;
   position: fixed;
   top: 30px;
   right: 28px;
@@ -520,9 +524,10 @@ section {
 }
 
 .video-container {
+  /* Darker top stop keeps hero text legible over the video (WCAG 1.4.3) */
   background: linear-gradient(
     to bottom,
-    rgba(5, 17, 39, 0.2) 0%,
+    rgba(5, 17, 39, 0.45) 0%,
     #050e1d 100%
   );
   height: 100vh;
@@ -534,7 +539,7 @@ section {
   background: linear-gradient(
     to bottom,
     #050e1d 0%,
-    rgba(5, 17, 39, 0.2) 100%
+    rgba(5, 17, 39, 0.75) 100%
   );
   background-size: cover;
   background-position: top center;
@@ -1240,3 +1245,230 @@ textarea::placeholder {
   max-width: 100% !important;
 }
 
+
+
+/* ==========================================================
+   Accessibility (WCAG 2.2 AA)
+   ========================================================== */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link: hidden until focused */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  padding: 12px 20px;
+  background: var(--brand-color);
+  color: #050e1d;
+  font-weight: 600;
+  border-radius: var(--master-border-radius);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Visible keyboard focus everywhere (2.4.7 / 1.4.11) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #050e1d !important;
+}
+
+/* Logo link needs a box so its focus ring is visible */
+.logo-link {
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  width: 200px;
+  height: 54px;
+  z-index: 3;
+}
+
+.logo-link #logo {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* Button-styled links (avoid nesting <button> inside <a>) */
+.button {
+  display: inline-block;
+  background-color: var(--brand-color);
+  border-radius: var(--master-border-radius);
+  line-height: 44px;
+  min-height: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #050e1d;
+  padding: 0 20px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: var(--transition-duration);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button.secondary {
+  display: block;
+  width: 180px;
+  margin: 20px auto 0;
+  color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Service cards are now links containing headings */
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+a.card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.card h3 {
+  font-size: 20px;
+}
+
+a.card:hover .button.secondary {
+  transform: scale(1.05);
+}
+
+/* Former decorative h3 subheads are now paragraphs */
+.lead {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ddd;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Stats: number + label in one sentence for screen readers */
+.stat-value {
+  margin: 0 0 64px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.stat-value .stat {
+  display: block;
+  font-size: 5rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 110%;
+  margin-bottom: 8px;
+}
+
+.stat-value .stat-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ddd;
+  opacity: 0.8;
+}
+
+/* Visible form labels (3.3.2) – override Materialize floating labels */
+.input-field label {
+  position: static !important;
+  transform: none !important;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.input-field label span,
+.form-note span {
+  font-size: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  color: var(--brand-color);
+}
+
+.form-note {
+  font-size: 16px;
+}
+
+a[href^="mailto:"] {
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+/* Off-canvas mobile nav: keep hidden links out of the tab order */
+@media only screen and (max-width: 1040px) {
+  #navWrapper {
+    visibility: hidden;
+    transition-property: right, visibility;
+  }
+
+  #navWrapper.active {
+    visibility: visible;
+  }
+
+  .logo-link {
+    left: 20px;
+    top: 24px;
+  }
+}
+
+/* Respect reduced-motion preferences (2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .button:hover,
+  button:hover,
+  .card:hover,
+  .section img:hover,
+  #logo:hover,
+  .down:hover {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,31 @@
+# Archer Engineering Services
+
+> Atlanta, Georgia civil engineering firm with 20+ years of experience. Services: civil engineering / site design, stormwater management facility inspection, and Energy Star benchmarking and certification for commercial and multi-family residential buildings. All inquiries are reviewed by a licensed Professional Engineer.
+
+- Website: https://www.archer-eng.com/
+- Email: derek@archer-eng.com
+- Service area: Atlanta, Georgia
+- Request a quote: https://www.archer-eng.com/#contact
+
+## Services
+
+- [Civil Engineering / Site Design](https://www.archer-eng.com/#services-site-design): Planning, design and preparation of civil construction documents for single-family, multi-family residential and commercial developments. Includes site, grading and drainage plans; utility (water and sewer) layout; erosion and sediment control design; stormwater management modeling and design; and permitting.
+- [Stormwater Management Facility Inspection](https://www.archer-eng.com/#services-stormwater): Inspection and documentation of stormwater management facilities, including Green Infrastructure Practices, to satisfy local jurisdictional requirements.
+- [Energy Star Benchmarking and Certification](https://www.archer-eng.com/#services-energystar): Verification of commercial and multi-family residential buildings for the Energy Star label. Includes property data benchmarking, Professional Engineer verification, and managing the certification process.
+
+## Company
+
+- 20+ years of civil engineering experience
+- 15+ years of Energy Star certification work
+- 100+ clients
+
+## How to request a quote
+
+Submit the form at https://www.archer-eng.com/#contact (HTML form, POST to https://formspree.io/f/xvgyqjpk) with these fields:
+
+- `name` (required): contact name
+- `email` (required): contact email
+- `phone` (optional): contact phone
+- `details` (optional): project details
+
+Helpful details to include: type of property (commercial, multi-family or single-family residential), location, which service is needed, and any deadlines or compliance requirements. Alternatively, email derek@archer-eng.com.
